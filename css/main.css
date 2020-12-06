@@ -1,0 +1,177 @@
+@charset "utf-8";
+::selection {
+  background-color: #879684;
+  color: #e7ee80;
+}
+/* -----------intro------------- */
+.intro_wrap {
+  display: grid;
+  grid-template-columns: 0.6fr 1fr 0.6fr;
+  grid-template-rows: repeat(2, 1fr);
+  height: 90vh;
+  width: 100%;
+  border-bottom: 1px solid #161616;
+}
+.intro_wrap .img {
+  background: url(../img/thumb_main.png) no-repeat center center;
+  background-size: cover;
+  grid-area: 1/1/4/4;
+}
+.intro_wrap h1 {
+  color: #d4e7d0;
+  font-weight: 500;
+  font-size: 3em;
+  padding: 10rem 0 0 0rem;
+  grid-area: 1/2/3/2;
+  letter-spacing: -1px;
+}
+.intro_wrap h1 p {
+  text-align: right;
+}
+.intro_wrap h1 span {
+  text-transform: uppercase;
+}
+.intro_wrap .s_title {
+  color: #d4e7d0;
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  font-size: 1em;
+  grid-area: 1/2;
+  padding-top: 60vh;
+}
+.intro_wrap .s_title p {
+  display: inline-block;
+  font-weight: 300;
+  border-radius: 50%;
+  border: 1px solid #d4e7d0;
+  padding: 0.5rem 2rem;
+}
+.intro_wrap .txt {
+  font-family: "Noto Sans KR";
+  color: #d4e7d0;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.5em;
+  grid-area: 2/2;
+  margin-top: 1rem;
+}
+.intro_wrap div {
+  grid-column: 1/2;
+}
+/*-----------list-----------*/
+.portfolio_wrap .portfolio span {
+  display: inline-block;
+  padding: 4rem 0 0 3rem;
+  font-size: 2.5em;
+  font-weight: 400;
+}
+.portfolio_wrap .portfolio .p_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+  grid-gap: 3rem;
+  padding: 3rem 3rem 0 3rem;
+}
+/*        list_img         */
+.portfolio_wrap .portfolio {
+  border-bottom: 1px solid #161616;
+}
+.portfolio_wrap .portfolio .p_list .p_item {
+  width: calc(100%);
+  border: 1px solid #161616;
+  transition: all 0.3s;
+  box-shadow: 0px 0.5em 20px rgba(0, 0, 0, 0.15);
+}
+.portfolio_wrap .portfolio .p_list .p_item img {
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 100%;
+  height: 100% !important;
+}
+/* info */
+.portfolio_wrap .portfolio .p_list .p_info {
+  margin: 0;
+}
+.portfolio_wrap .portfolio .p_list .p_category {
+  border-top: 1px solid #161616;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  font-weight: 400;
+}
+.portfolio_wrap .portfolio .p_list .title {
+  border-top: 1px solid #161616;
+  padding: 18px 15px;
+  font-weight: 500;
+  font-size: 18px;
+}
+.portfolio_wrap .portfolio .btn {
+  margin: 4.5rem 0 4rem 0;
+  text-align: center;
+}
+.portfolio_wrap .portfolio .btn a {
+  border-radius: 2em;
+  border: 1px solid #161616;
+  padding: 1em 2.5em;
+  display: inline-block;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+/* about */
+.about_wrap {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  grid-template-rows: repeat(2, 1fr);
+  height: 24rem;
+  width: 100%;
+  border-bottom: 1px solid #161616;
+}
+.about_wrap .title {
+  padding: 5rem 0 0 3rem;
+  grid-area: 1/1/2/2;
+}
+.about_wrap .title h3 {
+  font-weight: 400;
+  font-size: 3rem;
+  letter-spacing: -1px;
+}
+.about_wrap .info {
+  margin: 0 6rem 0 0;
+}
+.about_wrap .info h3 {
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  font-size: 2em;
+  grid-area: 1/2;
+  padding-top: 5.4rem;
+}
+.about_wrap .info p {
+  font-family: "Noto Sans KR";
+  font-weight: 300;
+  font-size: 1em;
+  padding-top: 1rem;
+  line-height: 1.5em;
+  grid-area: 2/2;
+}
+.about_wrap div {
+  grid-column: 2/3;
+}
+/* btn */
+.about_wrap .btn {
+  margin: 2.5rem 0 2rem 0;
+}
+.about_wrap .btn a {
+  border-radius: 2em;
+  border: 1px solid #161616;
+  padding: 1em 2.5em;
+  display: inline-block;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+/* -----------반응형---------- */
+@media screen and (max-width: 768px) {
+  .portfolio_wrap .portfolio .p_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80%, 1fr));
+    grid-gap: 3rem;
+    padding: 3rem 3rem 0 3rem;
+  }
+}
